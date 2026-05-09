@@ -1,4 +1,4 @@
-import { MapPin } from "lucide-react";
+import { MapPin, PhoneCall } from "lucide-react";
 import bali from "@/assets/dest-bali.jpg";
 import swiss from "@/assets/dest-switzerland.jpg";
 import maldives from "@/assets/dest-maldives.jpg";
@@ -54,7 +54,18 @@ export function Destinations() {
                 <span className="absolute top-3 left-3 inline-flex items-center gap-1 px-2.5 py-1 rounded-full glass text-[11px] font-medium text-foreground">
                   <MapPin className="h-3 w-3 text-teal" /> {d.country}
                 </span>
-                <div className="absolute bottom-3 left-4 right-4 text-white flex items-end justify-between gap-2">
+
+                {/* Hover overlay with CTA */}
+                <div className="absolute inset-0 bg-foreground/55 opacity-0 group-hover:opacity-100 transition-opacity duration-400 grid place-items-center">
+                  <a
+                    href="#contact"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white text-foreground text-sm font-semibold shadow-lift translate-y-2 group-hover:translate-y-0 transition-transform duration-400"
+                  >
+                    <PhoneCall className="h-4 w-4 text-teal" /> Request a Callback
+                  </a>
+                </div>
+
+                <div className="absolute bottom-3 left-4 right-4 text-white flex items-end justify-between gap-2 group-hover:opacity-0 transition-opacity">
                   <div>
                     <h3 className="font-display text-xl font-semibold leading-tight">{d.name}</h3>
                     <div className="text-[11px] text-white/85">{d.days}</div>

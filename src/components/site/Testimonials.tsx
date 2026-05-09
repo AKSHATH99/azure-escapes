@@ -3,30 +3,40 @@ import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
 import t1 from "@/assets/test-1.jpg";
 import t2 from "@/assets/test-2.jpg";
 import t3 from "@/assets/test-3.jpg";
+import gGreece from "@/assets/gal-greece.jpg";
+import gCherry from "@/assets/gal-cherry.jpg";
+import gCappadocia from "@/assets/gal-cappadocia.jpg";
+import gMaldives from "@/assets/gal-maldives-dinner.jpg";
+import gDesert from "@/assets/gal-desert.jpg";
+import gSki from "@/assets/gal-skiing.jpg";
+import dSwiss from "@/assets/dest-switzerland.jpg";
+import dMaldives from "@/assets/dest-maldives.jpg";
+import dParis from "@/assets/dest-paris.jpg";
+import dJapan from "@/assets/dest-japan.jpg";
 
 const items = [
   {
-    img: t1,
+    photos: [t1, gGreece, gCherry, dParis],
     quote:
       "We thought we booked a vacation. What we got was a memory we'll talk about for years.",
     name: "Sarah & Michael",
     trip: "Santorini Escape • 2025",
   },
   {
-    img: t2,
+    photos: [t2, gMaldives, dMaldives, gDesert],
     quote: "Every detail was felt. Every sunset was earned. SkyRoute made us fall in love again.",
     name: "Priya & Arjun",
     trip: "Maldives Escape • 2025",
   },
   {
-    img: t3,
+    photos: [t3, gSki, dSwiss, gCappadocia],
     quote:
       "From welcome flowers to private island dinners — flawless. The kids still talk about it.",
     name: "The Wilson Family",
     trip: "Swiss Adventure • 2024",
   },
   {
-    img: t1,
+    photos: [t1, gCherry, dJapan, gGreece],
     quote: "I traveled solo and never felt alone. They thought of everything I didn't.",
     name: "Aanya R.",
     trip: "Kyoto Journey • 2024",
@@ -73,15 +83,24 @@ export function Testimonials() {
             >
               {items.map((t, k) => (
                 <article key={k} className="min-w-full px-1">
-                  <div className="group grid md:grid-cols-[1.1fr_1fr] gap-0 bg-card rounded-3xl overflow-hidden shadow-lift hover-lift">
-                    <div className="relative aspect-[4/3] md:aspect-auto overflow-hidden">
-                      <img
-                        src={t.img}
-                        alt={t.name}
-                        loading="lazy"
-                        className="img-zoom absolute inset-0 h-full w-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                  <div className="grid md:grid-cols-[1.15fr_1fr] gap-0 bg-card rounded-3xl overflow-hidden shadow-lift">
+                    {/* Collage */}
+                    <div className="relative aspect-[4/3] md:aspect-auto p-3 bg-secondary/40">
+                      <div className="grid grid-cols-2 grid-rows-2 gap-2 h-full min-h-[280px]">
+                        {t.photos.map((src, idx) => (
+                          <div
+                            key={idx}
+                            className="relative overflow-hidden rounded-xl group"
+                          >
+                            <img
+                              src={src}
+                              alt={`${t.name} memory ${idx + 1}`}
+                              loading="lazy"
+                              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            />
+                          </div>
+                        ))}
+                      </div>
                     </div>
                     <div className="relative p-7 lg:p-10 flex flex-col justify-center">
                       <Quote className="absolute top-5 right-5 h-14 w-14 text-secondary" />

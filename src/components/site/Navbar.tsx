@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Compass, Menu, X } from "lucide-react";
+import { Compass, Menu, X, Phone, Mail } from "lucide-react";
 
 const links = [
   { label: "Destinations", href: "#destinations" },
@@ -76,10 +76,16 @@ export function Navbar() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-2">
-            <a href="#contact" className="hidden sm:inline-flex btn-primary !py-2.5 !px-5 text-sm">
-              Plan My Trip
-            </a>
+          <div className="flex items-center gap-3">
+            <div className={`hidden md:flex items-center gap-3 text-sm font-medium ${scrolled ? "text-foreground/85" : "text-white"}`}>
+              <a href="tel:+919876543210" className="inline-flex items-center gap-1.5 hover:text-teal transition-colors">
+                <Phone className="h-4 w-4" /> +91 98765 43210
+              </a>
+              <span className={`h-4 w-px ${scrolled ? "bg-border" : "bg-white/40"}`} />
+              <a href="mailto:hello@skyroute.com" className="inline-flex items-center gap-1.5 hover:text-teal transition-colors">
+                <Mail className="h-4 w-4" /> hello@skyroute.com
+              </a>
+            </div>
             <button
               onClick={() => setOpen((o) => !o)}
               className={`lg:hidden grid place-items-center h-10 w-10 rounded-full ${

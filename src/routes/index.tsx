@@ -2,14 +2,15 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/site/Navbar";
 import { Hero } from "@/components/site/Hero";
 import { Destinations } from "@/components/site/Destinations";
+import { SeasonalOffers } from "@/components/site/SeasonalOffers";
 import { WhyUs } from "@/components/site/WhyUs";
 import { Packages } from "@/components/site/Packages";
 import { Testimonials } from "@/components/site/Testimonials";
-import { Gallery } from "@/components/site/Gallery";
-import { Process } from "@/components/site/Process";
+import { MemoryWall } from "@/components/site/MemoryWall";
 import { CTABanner } from "@/components/site/CTABanner";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
+import { ContactFAB } from "@/components/site/ContactFAB";
 import { useReveal } from "@/hooks/use-reveal";
 
 export const Route = createFileRoute("/")({
@@ -47,14 +48,15 @@ function Index() {
       <Navbar />
       <Hero />
       <Destinations />
+      <SeasonalOffers />
       <WhyUs />
       <Packages />
       <Testimonials />
-      <Gallery />
-      <Process />
+      <MemoryWall />
       <CTABanner />
       <Contact />
       <Footer />
+      <ContactFAB />
     </main>
   );
 }

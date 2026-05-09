@@ -78,7 +78,11 @@ export function Contact() {
             </div>
           </div>
 
-          <button type="submit" className="mt-7 w-full btn-primary justify-center">
+          <button
+            type="submit"
+            className="mt-7 w-full inline-flex items-center justify-center gap-2 h-12 rounded-lg text-white text-sm font-semibold transition hover:brightness-110"
+            style={{ background: "var(--gradient-ocean)" }}
+          >
             <Send className="h-4 w-4" />
             {submitted ? "Thank you — we'll be in touch!" : "Plan My Dream Vacation"}
           </button>

@@ -7,7 +7,6 @@ import { WhyUs } from "@/components/site/WhyUs";
 import { Packages } from "@/components/site/Packages";
 import { Testimonials } from "@/components/site/Testimonials";
 import { MemoryWall } from "@/components/site/MemoryWall";
-import { CTABanner } from "@/components/site/CTABanner";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { ContactFAB } from "@/components/site/ContactFAB";
@@ -53,7 +52,6 @@ function Index() {
       <Packages />
       <Testimonials />
       <MemoryWall />
-      <CTABanner />
       <Contact />
       <Footer />
       <ContactFAB />

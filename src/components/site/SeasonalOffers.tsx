@@ -1,4 +1,4 @@
-import { ArrowRight, Sun, Snowflake, Heart, Users } from "lucide-react";
+import { PhoneCall, Sun, Snowflake, Heart, Users } from "lucide-react";
 import summer from "@/assets/pkg-romantic.jpg";
 import winter from "@/assets/dest-switzerland.jpg";
 import honeymoon from "@/assets/gal-maldives-dinner.jpg";
@@ -81,9 +81,9 @@ export function SeasonalOffers() {
 
                   <a
                     href="#contact"
-                    className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-gold-soft opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
+                    className="mt-4 inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white text-foreground text-xs font-semibold shadow-soft opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
                   >
-                    View Package <ArrowRight className="h-3.5 w-3.5" />
+                    <PhoneCall className="h-3.5 w-3.5 text-teal" /> Request a Callback
                   </a>
                 </div>
               </div>

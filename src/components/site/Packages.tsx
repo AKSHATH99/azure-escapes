@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, PhoneCall } from "lucide-react";
 import romantic from "@/assets/pkg-romantic.jpg";
 import family from "@/assets/pkg-family.jpg";
 import solo from "@/assets/pkg-solo.jpg";
@@ -42,13 +42,21 @@ export function Packages() {
                   className="img-zoom h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-foreground/50 opacity-0 group-hover:opacity-100 transition-opacity duration-400 grid place-items-center">
+                  <a
+                    href="#contact"
+                    className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-white text-foreground text-sm font-semibold shadow-lift translate-y-2 group-hover:translate-y-0 transition-transform duration-400"
+                  >
+                    <PhoneCall className="h-4 w-4 text-teal" /> Request a Callback
+                  </a>
+                </div>
               </div>
-              <div className="absolute bottom-0 inset-x-0 p-7 text-white flex items-end justify-between gap-4">
+              <div className="absolute bottom-0 inset-x-0 p-7 text-white flex items-end justify-between gap-4 group-hover:opacity-0 transition-opacity">
                 <div>
                   <h3 className="font-display text-2xl font-semibold">{p.t}</h3>
                   <p className="mt-1 text-sm text-white/90 max-w-md">{p.d}</p>
                 </div>
-                <span className="grid place-items-center h-12 w-12 rounded-full bg-white/95 text-teal group-hover:bg-gold transition-colors shadow-soft">
+                <span className="grid place-items-center h-12 w-12 rounded-full bg-white/95 text-teal shadow-soft">
                   <ArrowUpRight className="h-5 w-5" />
                 </span>
               </div>

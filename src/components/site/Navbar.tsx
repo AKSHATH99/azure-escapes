@@ -23,38 +23,33 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrolled ? "py-3" : "py-5"
+        scrolled ? "py-2" : "py-4"
       }`}
     >
       <div
-        className={`mx-auto max-w-7xl px-5 lg:px-8 transition-all duration-500 ${
-          scrolled
-            ? "rounded-2xl glass-strong shadow-soft"
-            : "bg-transparent"
-        }`}
+        className={`mx-auto px-5 lg:px-7 transition-all duration-500 border border-black/5`}
+        style={{
+          width: "92%",
+          maxWidth: "1200px",
+          background: "#FAF8F5",
+          backdropFilter: "saturate(160%) blur(14px)",
+          WebkitBackdropFilter: "saturate(160%) blur(14px)",
+          borderRadius: "30px",
+          boxShadow: scrolled
+            ? "0 10px 30px -12px rgba(15, 23, 42, 0.18)"
+            : "0 6px 20px -10px rgba(15, 23, 42, 0.12)",
+        }}
       >
-        <div className="flex items-center justify-between gap-6 py-2">
+        <div className={`flex items-center justify-between gap-6 transition-all ${scrolled ? "py-1.5" : "py-2.5"}`}>
           <a href="#top" className="flex items-center gap-3 group">
-            <span
-              className={`grid place-items-center h-11 w-11 rounded-2xl transition-all ${
-                scrolled ? "bg-primary text-primary-foreground" : "bg-white/85 text-primary"
-              } shadow-soft`}
-            >
+            <span className="grid place-items-center h-10 w-10 rounded-2xl bg-primary text-primary-foreground shadow-soft">
               <Compass className="h-5 w-5" />
             </span>
             <span className="leading-tight">
-              <span
-                className={`block font-display text-xl font-semibold tracking-tight ${
-                  scrolled ? "text-foreground" : "text-white drop-shadow"
-                }`}
-              >
+              <span className="block font-display text-lg font-semibold tracking-tight" style={{ color: "#1E293B" }}>
                 SkyRoute
               </span>
-              <span
-                className={`block text-[11px] uppercase tracking-[0.18em] ${
-                  scrolled ? "text-muted-foreground" : "text-white/85"
-                }`}
-              >
+              <span className="block text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
                 Journeys Beyond Expectations
               </span>
             </span>
@@ -65,32 +60,28 @@ export function Navbar() {
               <a
                 key={l.href}
                 href={l.href}
-                className={`relative px-4 py-2 text-sm font-medium rounded-full transition-colors ${
-                  scrolled
-                    ? "text-foreground/80 hover:text-primary"
-                    : "text-white/90 hover:text-white"
-                }`}
+                className="relative px-3.5 py-2 text-sm font-medium transition-colors group"
+                style={{ color: "#1E293B" }}
               >
-                {l.label}
+                <span className="group-hover:text-teal transition-colors">{l.label}</span>
+                <span className="absolute left-3.5 right-3.5 -bottom-0.5 h-px bg-teal scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
               </a>
             ))}
           </nav>
 
           <div className="flex items-center gap-3">
-            <div className={`hidden md:flex items-center gap-3 text-sm font-medium ${scrolled ? "text-foreground/85" : "text-white"}`}>
+            <div className="hidden md:flex items-center gap-3 text-xs font-medium" style={{ color: "#1E293B" }}>
               <a href="tel:+919876543210" className="inline-flex items-center gap-1.5 hover:text-teal transition-colors">
-                <Phone className="h-4 w-4" /> +91 98765 43210
+                <Phone className="h-3.5 w-3.5 text-teal" /> +91 98765 43210
               </a>
-              <span className={`h-4 w-px ${scrolled ? "bg-border" : "bg-white/40"}`} />
+              <span className="h-3 w-px bg-black/15" />
               <a href="mailto:hello@skyroute.com" className="inline-flex items-center gap-1.5 hover:text-teal transition-colors">
-                <Mail className="h-4 w-4" /> hello@skyroute.com
+                <Mail className="h-3.5 w-3.5 text-teal" /> hello@skyroute.com
               </a>
             </div>
             <button
               onClick={() => setOpen((o) => !o)}
-              className={`lg:hidden grid place-items-center h-10 w-10 rounded-full ${
-                scrolled ? "bg-secondary text-foreground" : "bg-white/85 text-primary"
-              }`}
+              className="lg:hidden grid place-items-center h-10 w-10 rounded-full bg-secondary text-foreground"
               aria-label="Menu"
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -105,7 +96,8 @@ export function Navbar() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="px-4 py-3 rounded-xl text-foreground/85 hover:bg-secondary"
+                className="px-4 py-3 rounded-xl hover:bg-black/5"
+                style={{ color: "#1E293B" }}
               >
                 {l.label}
               </a>

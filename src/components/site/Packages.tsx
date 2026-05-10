@@ -2,7 +2,7 @@ import { ArrowUpRight, PhoneCall } from "lucide-react";
 import romantic from "@/assets/pkg-romantic.jpg";
 import family from "@/assets/pkg-family.jpg";
 import solo from "@/assets/pkg-solo.jpg";
-import luxury from "@/assets/pkg-luxury.jpg";
+import luxury from "@/assets/destinations/pkg-luxury.jpg";
 
 const items = [
   { img: romantic, t: "Romantic Escapes", d: "Perfect for honeymoons and anniversaries." },
@@ -32,7 +32,7 @@ export function Packages() {
               className="group relative overflow-hidden rounded-3xl bg-card hover-lift glow-on-hover reveal"
               style={{ transitionDelay: `${i * 80}ms` }}
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-16/10 overflow-hidden">
                 <img
                   src={p.img}
                   alt={p.t}
@@ -41,7 +41,7 @@ export function Packages() {
                   height={640}
                   className="img-zoom h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/65 via-black/20 to-transparent" />
                 <div className="absolute inset-0 bg-foreground/50 opacity-0 group-hover:opacity-100 transition-opacity duration-400 grid place-items-center">
                   <a
                     href="#contact"

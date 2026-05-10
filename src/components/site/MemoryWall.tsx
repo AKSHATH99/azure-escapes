@@ -10,8 +10,8 @@ import cherry from "@/assets/gal-cherry.jpg";
 import dubai from "@/assets/dest-dubai.jpg";
 import desert from "@/assets/gal-desert.jpg";
 import paris from "@/assets/dest-paris.jpg";
-import greece from "@/assets/gal-greece.jpg";
-import cappadocia from "@/assets/gal-cappadocia.jpg";
+import greece from "@/assets/destinations/dest-santorini.jpg";
+import cappadocia from "@/assets/destinations/gal-cappadocia.jpg";
 
 type Memory = {
   img: string;
@@ -85,7 +85,7 @@ export function MemoryWall() {
                 loading="lazy"
                 className="img-zoom absolute inset-0 h-full w-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/15 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
               <figcaption className="absolute inset-x-3 bottom-3 text-white translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
                 <div className="inline-flex items-center gap-1.5 text-xs font-medium">
                   <MapPin className="h-3.5 w-3.5 text-gold-soft" /> {m.loc}

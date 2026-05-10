@@ -60,9 +60,9 @@ export function SeasonalOffers() {
               className="group relative overflow-hidden rounded-2xl bg-card shadow-soft hover-lift reveal"
               style={{ transitionDelay: `${i * 80}ms` }}
             >
-              <div className="relative aspect-[4/5] overflow-hidden">
+              <div className="relative aspect-4/5 overflow-hidden">
                 <img src={o.img} alt={o.title} loading="lazy" className="img-zoom h-full w-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/30 to-transparent" />
 
                 {/* Urgency pill */}
                 <span className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-gold/95 text-foreground text-[10px] font-bold uppercase tracking-wider shadow-soft">

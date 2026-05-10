@@ -1,17 +1,18 @@
 import { MapPin, PhoneCall } from "lucide-react";
-import bali from "@/assets/dest-bali.jpg";
-import swiss from "@/assets/dest-switzerland.jpg";
-import maldives from "@/assets/dest-maldives.jpg";
-import paris from "@/assets/dest-paris.jpg";
-import dubai from "@/assets/dest-dubai.jpg";
-import japan from "@/assets/dest-japan.jpg";
-import santorini from "@/assets/gal-greece.jpg";
-import cappadocia from "@/assets/gal-cappadocia.jpg";
-import iceland from "@/assets/pkg-luxury.jpg";
+import indonesia from "@/assets/destinations/indonasia.jpg";
+import swiss from "@/assets/destinations/dest-switzerland.jpg";
+import maldives from "@/assets/destinations/dest-maldives.jpg";
+import paris from "@/assets/destinations/dest-paris.jpg";
+import dubai from "@/assets/destinations/dest-dubai.jpg";
+import japan from "@/assets/destinations/japan.jpeg";
+import santorini from "@/assets/destinations/dest-santorini.jpg";
+import cappadocia from "@/assets/destinations/gal-cappadocia.jpg";
+import iceland from "@/assets/destinations/pkg-luxury.jpg";
+import europe from "@/assets/destinations/europe.jpg";
 
 const items = [
-  { img: bali, name: "Bali", country: "Indonesia", price: "₹49,999", days: "5D · 4N" },
-  { img: swiss, name: "Switzerland", country: "Europe", price: "₹1,49,999", days: "7D · 6N" },
+  { img: indonesia, name: "Bali", country: "Indonesia", price: "₹49,999", days: "5D · 4N" },
+  { img: europe, name: "Europe", country: "Europe", price: "₹1,49,999", days: "7D · 6N" },
   { img: maldives, name: "Maldives", country: "Indian Ocean", price: "₹89,999", days: "5D · 4N" },
   { img: paris, name: "Paris", country: "France", price: "₹1,19,000", days: "6D · 5N" },
   { img: dubai, name: "Dubai", country: "UAE", price: "₹54,999", days: "5D · 4N" },
@@ -43,14 +44,14 @@ export function Destinations() {
               className="group relative overflow-hidden rounded-2xl bg-card hover-lift shadow-soft reveal"
               style={{ transitionDelay: `${i * 60}ms` }}
             >
-              <div className="relative aspect-[5/3] overflow-hidden">
+              <div className="relative aspect-5/3 overflow-hidden">
                 <img
                   src={d.img}
                   alt={`${d.name}, ${d.country}`}
                   loading="lazy"
                   className="img-zoom h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/65 via-black/15 to-transparent" />
                 <span className="absolute top-3 left-3 inline-flex items-center gap-1 px-2.5 py-1 rounded-full glass text-[11px] font-medium text-foreground">
                   <MapPin className="h-3 w-3 text-teal" /> {d.country}
                 </span>

@@ -13,9 +13,9 @@ export default defineConfig({
   },
   vite: {
     build: {
-      ssr: true,
+      ssr: false,
       rollupOptions: {
-        input: "./src/server.ts",
+        input: "./index.html",
       },
     },
   },

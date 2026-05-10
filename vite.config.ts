@@ -8,15 +8,8 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 // Configure for Vercel deployment
 export default defineConfig({
+  cloudflare: false,
   tanstackStart: {
-    server: { entry: "server" },
-  },
-  vite: {
-    build: {
-      ssr: false,
-      rollupOptions: {
-        input: "./index.html",
-      },
-    },
+    ssr: false,
   },
 });
